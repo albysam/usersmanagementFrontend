@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import api from '../api'; // Adjust the import path as needed
+import api from '../api'; 
 import { Link } from 'react-router-dom';
 
 interface User {
   id: number;
   name: string;
   email: string;
-  createdAt: string; // Date string
-  updatedAt: string; // Date string
+  createdAt: string; 
+  updatedAt: string; 
 }
 
 const UserList: React.FC = () => {
@@ -32,6 +32,17 @@ const UserList: React.FC = () => {
     <div className="p-8 bg-gray-100 min-h-screen">
       <h1 className="text-4xl font-bold mb-6 text-center text-gray-800">User List</h1>
       {error && <div className="text-red-500 text-center mb-4">{error}</div>}
+      
+      {/* Create User Button */}
+      <div className="mb-4 text-center">
+        <Link
+          to="/create"
+          className="bg-blue-500 text-white py-2 px-4 rounded-lg shadow hover:bg-blue-600 transition"
+        >
+          Create User
+        </Link>
+      </div>
+
       <div className="overflow-x-auto">
         <table className="min-w-full bg-white border border-gray-300 rounded-lg shadow-md">
           <thead className="bg-gradient-to-r from-blue-500 to-blue-600 text-white">
