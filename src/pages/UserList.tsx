@@ -33,13 +33,19 @@ const UserList: React.FC = () => {
       <h1 className="text-4xl font-bold mb-6 text-center text-gray-800">User List</h1>
       {error && <div className="text-red-500 text-center mb-4">{error}</div>}
       
-      {/* Create User Button */}
-      <div className="mb-4 text-center">
+      {/* Buttons */}
+      <div className="mb-4 text-center flex justify-center gap-4">
         <Link
           to="/create"
           className="bg-blue-500 text-white py-2 px-4 rounded-lg shadow hover:bg-blue-600 transition"
         >
           Create User
+        </Link>
+        <Link
+          to="/login"
+          className="bg-green-500 text-white py-2 px-4 rounded-lg shadow hover:bg-green-600 transition"
+        >
+          Login
         </Link>
       </div>
 
